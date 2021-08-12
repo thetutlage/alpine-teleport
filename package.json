@@ -34,6 +34,7 @@
   },
    "np": {
     "contents": ".",
+    "tests": false,
     "anyBranch": false
   }
 }
