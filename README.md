@@ -1,12 +1,12 @@
 # Alpine teleport
 > A Vue style teleport for Alpine.js
 
-Alpine teleport is an attempt to add Vue style [teleport](https://v3.vuejs.org/guide/teleport.html) functionality to Alpine.js.
+Alpine teleport is an attempt to add a Vue style [teleport](https://v3.vuejs.org/guide/teleport.html) functionality to Alpine.js.
 
-The primary motivation behind the plugin is to create accessible dialogs and by placing them at the top level within the HTML body.
+The primary motivation behind the plugin is to create accessible dialogs and place them at the top level within the HTML body.
 
 ## Usage
-You can either use the plugin from **CDN via the script tag** or import it as a regular package by installing it from npm.
+You can either use the plugin from **CDN via the script tag** or import it as a standard package by installing it from npm.
 
 ### CDN
 When using the CDN build, you must place the plugin script before the alpine core script.
@@ -20,7 +20,7 @@ When using the CDN build, you must place the plugin script before the alpine cor
 ```
 
 ### Npm module
-Make sure to first install the package from the npm registry and then use it as follows.
+Make sure first to install the package from the npm registry and then use it as follows.
 
 ```sh
 npm i alpine-teleport
@@ -34,7 +34,7 @@ Alpine.plugin(teleport)
 ```
 
 ## x-teleport
-The `x-teleport` directive accepts only one argument, ie the DOM node inside which the contents should be teleported. The DOM node should be present in the DOM at the time `x-teleport` is evaluated.
+The `x-teleport` directive accepts only one argument, i.e., the DOM node inside which the contents should be teleported. Thus, the DOM node should be present in the DOM when `x-teleport` is evaluated.
 
 ```html
 <div x-data="{ username: '' }">
@@ -93,7 +93,7 @@ The warning is raised when the `x-teleport` directive is used on a DOM element o
 ---
 
 #### "x-teleport" contents must have a single root node
-The warning is raised when the `x-teleport` template tag has more than one root elements. The fix is wrap all the elements inside a parent div.
+The warning is raised when the `x-teleport` template tag has more than one root element. The fix is to wrap all the elements inside a parent div.
 
 ```html
 <!-- ✅ Valid -->
@@ -114,6 +114,6 @@ The warning is raised when the `x-teleport` template tag has more than one root 
 ---
 
 #### "x-teleport" cannot locate the target DOM node
-The warning is raised when we are not able to find a DOM node with the selector expression passed to `x-teleport`.
+The warning is raised when we cannot find a DOM node with the selector expression passed to `x-teleport`.
 
-Make sure you are using a valid query selector, or manually verify that the DOM node with the same selector exists. `document.querySelector(yourExpression)` should we able to locate the DOM node.
+Make sure you are using a valid query selector, or manually verify that the DOM node with the same selector exists. `document.querySelector(yourExpression)` should be able to locate the DOM node.
