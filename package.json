@@ -1,6 +1,6 @@
 {
   "name": "alpine-teleport",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A teleport plugin for Alpine. Similar to Vue.js teleport component",
   "main": "dist/module.cjs.js",
   "module": "dist/module.esm.js",
