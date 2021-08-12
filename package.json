@@ -1,0 +1,35 @@
+{
+  "name": "alpine-teleport",
+  "version": "0.0.0",
+  "description": "A teleport plugin for Alpine. Similar to Vue.js teleport component",
+  "main": "dist/module.cjs.js",
+  "module": "dist/module.esm.js",
+  "unpkg": "dist/cdn.min.js",
+  "scripts": {
+    "clean": "del dist",
+    "prebuild": "npm run clean",
+    "release": "np",
+    "version": "npm run build",
+    "build:cdn": "esbuild ./src/teleport.cdn.js --outfile=dist/cdn.js --bundle --platform=browser",
+    "build:cdn:min": "esbuild ./src/teleport.cdn.js --outfile=dist/cdn.min.js --bundle --platform=browser --minify",
+    "build:esm": "esbuild ./src/teleport.js --outfile=dist/module.esm.js --bundle --platform=neutral --main-fields=module,main",
+    "build:cjs": "esbuild ./src/teleport.js --outfile=dist/module.cjs.js --bundle --platform=node --target=node10.4",
+    "build": "npm run build:cdn && npm run build:cdn:min && npm run build:esm && npm run build:cjs"
+  },
+  "keywords": [
+    "alpine",
+    "alpinejs",
+    "teleport"
+  ],
+  "author": "virk",
+  "license": "MIT",
+  "devDependencies": {
+    "del-cli": "^4.0.1",
+    "esbuild": "^0.12.19",
+    "np": "^7.5.0"
+  },
+   "np": {
+    "contents": ".",
+    "anyBranch": false
+  }
+}

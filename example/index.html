@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<style type="text/css">
+	 #teleport-container {
+	 	border: 3px solid purple;
+	 }
+	</style>
+
+	<script defer src="/dist/cdn.min.js"></script>
+	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+  <div x-data="{ username: '' }" x-effect="function () {
+    const username = this.username.toUpperCase()
+    if (this.$refs.preview) {
+      this.$refs.preview.innerText = username
+    }
+  }">
+  	<h2>Component</h2>
+  	<p x-text="username"></p>
+
+  	<template x-teleport="#teleport-container">
+      <div>
+    	  <input type="text" name="username" x-model="username">
+        <p x-ref="preview"></p>
+      </div>
+  	</template>
+  </div>
+
+  <div x-data="{ username: '' }">
+    <input type="text" x-model="username" />
+
+    <template x-teleport="#teleport-container">
+      <div>
+        <h2> Preview </h2>
+        <p x-text="username"></p>
+      </div>
+    </template>
+  </div>
+
+  <div id="teleport-container">
+  	<h2>Teleport container</h2>
+  </div>
+</body>
+</html>
