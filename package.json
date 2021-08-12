@@ -5,6 +5,10 @@
   "main": "dist/module.cjs.js",
   "module": "dist/module.esm.js",
   "unpkg": "dist/cdn.min.js",
+  "files": [
+    "README.md",
+    "dist"
+  ],
   "scripts": {
     "clean": "del dist",
     "prebuild": "npm run clean",
