@@ -36,5 +36,16 @@
     "contents": ".",
     "tests": false,
     "anyBranch": false
-  }
+  },
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thetutlage/alpine-teleport.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thetutlage/alpine-teleport/issues"
+  },
+  "homepage": "https://github.com/thetutlage/alpine-teleport#readme"
 }

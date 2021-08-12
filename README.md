@@ -5,6 +5,9 @@ Alpine teleport is an attempt to add a Vue style [teleport](https://v3.vuejs.org
 
 The primary motivation behind the plugin is to create accessible dialogs and place them at the top level within the HTML body.
 
+## Demo
+Checkout the [demo dialog modal](https://codepen.io/harminder/pen/poPGmNV) component built using alpine, alpine-teleport and tailwindcss. 
+
 ## Usage
 You can either use the plugin from **CDN via the script tag** or import it as a standard package by installing it from npm.
 
