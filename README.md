@@ -1,6 +1,8 @@
 # Alpine teleport
 > A Vue style teleport for Alpine.js
 
+**⚠️⚠️ DEPRECATED. Please use https://alpinejs.dev/plugins/portal ⚠️⚠️**
+
 Alpine teleport is an attempt to add a Vue style [teleport](https://v3.vuejs.org/guide/teleport.html) functionality to Alpine.js.
 
 The primary motivation behind the plugin is to create accessible dialogs and place them at the top level within the HTML body.
